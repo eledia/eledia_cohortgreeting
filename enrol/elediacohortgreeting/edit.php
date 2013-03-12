@@ -35,7 +35,7 @@ $context = context_course::instance($course->id, MUST_EXIST);
 
 require_login($course);
 require_capability('moodle/course:enrolconfig', $context);
-require_capability('enrol/cohort:config', $context);
+require_capability('enrol/elediacohortgreeting:config', $context);
 
 $PAGE->set_url('/enrol/elediacohortgreeting/edit.php', array('courseid'=>$course->id, 'id'=>$instanceid));
 $PAGE->set_pagelayout('admin');

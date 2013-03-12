@@ -83,7 +83,7 @@ class enrol_elediacohortgreeting_plugin extends enrol_plugin {
         global $DB;
 
         $coursecontext = context_course::instance($courseid);
-        if (!has_capability('moodle/course:enrolconfig', $coursecontext) or !has_capability('enrol/cohort:config', $coursecontext)) {
+        if (!has_capability('moodle/course:enrolconfig', $coursecontext) or !has_capability('enrol/elediacohortgreeting', $coursecontext)) {
             return false;
         }
         list($sqlparents, $params) = $DB->get_in_or_equal(get_parent_contexts($coursecontext));
@@ -116,7 +116,7 @@ class enrol_elediacohortgreeting_plugin extends enrol_plugin {
 
         $icons = array();
 
-        if (has_capability('enrol/cohort:config', $context)) {
+        if (has_capability('enrol/elediacohortgreeting:config', $context)) {
             $editlink = new moodle_url("/enrol/elediacohortgreeting/edit.php", array('courseid'=>$instance->courseid, 'id'=>$instance->id));
             $icons[] = $OUTPUT->action_icon($editlink, new pix_icon('i/edit', get_string('edit'), 'core', array('class'=>'icon')));
         }

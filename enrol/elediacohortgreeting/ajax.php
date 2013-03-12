@@ -80,7 +80,7 @@ switch ($action) {
         break;
     case 'enrolcohort':
         require_capability('moodle/course:enrolconfig', $context);
-        require_capability('enrol/cohort:config', $context);
+        require_capability('enrol/elediacohortgreeting:config', $context);
         $roleid = required_param('roleid', PARAM_INT);
         $cohortid = required_param('cohortid', PARAM_INT);
 
