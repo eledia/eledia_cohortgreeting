@@ -83,7 +83,7 @@ class enrol_elediacohortgreeting_plugin extends enrol_plugin {
         global $DB;
 
         $coursecontext = context_course::instance($courseid);
-        if (!has_capability('moodle/course:enrolconfig', $coursecontext) or !has_capability('enrol/elediacohortgreeting', $coursecontext)) {
+        if (!has_capability('moodle/course:enrolconfig', $coursecontext) or !has_capability('enrol/elediacohortgreeting:config', $coursecontext)) {
             return false;
         }
         list($sqlparents, $params) = $DB->get_in_or_equal(get_parent_contexts($coursecontext));
