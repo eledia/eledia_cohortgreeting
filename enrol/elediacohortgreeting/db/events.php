@@ -17,9 +17,11 @@
 /**
  * Cohort enrolment plugin event handler definition.
  *
- * @package enrol_elediacohortgreeting
+ * @package    enrol
+ * @subpackage elediacohortgreeting
  * @category event
- * @copyright 2010 Petr Skoda {@link http://skodak.org}
+ * @author     Benjamin Wolf <support@eledia.de>
+ * @copyright  2013 eLeDia GmbH
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

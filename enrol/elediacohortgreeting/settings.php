@@ -17,8 +17,10 @@
 /**
  * Cohort enrolment plugin settings and presets.
  *
- * @package    enrol_elediacohortgreeting
- * @copyright  2010 Petr Skoda {@link http://skodak.org}
+ * @package    enrol
+ * @subpackage elediacohortgreeting
+ * @author     Benjamin Wolf <support@eledia.de>
+ * @copyright  2013 eLeDia GmbH
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

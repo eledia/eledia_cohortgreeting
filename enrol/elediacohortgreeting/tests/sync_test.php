@@ -17,9 +17,11 @@
 /**
  * Cohort enrolment sync functional test.
  *
- * @package    enrol_elediacohortgreeting
+ * @package    enrol
+ * @subpackage elediacohortgreeting
  * @category   phpunit
- * @copyright  2012 Petr Skoda {@link http://skodak.org}
+ * @author     Benjamin Wolf <support@eledia.de>
+ * @copyright  2013 eLeDia GmbH
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

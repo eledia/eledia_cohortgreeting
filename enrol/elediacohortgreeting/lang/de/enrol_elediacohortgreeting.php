@@ -18,8 +18,10 @@
 /**
  * Strings for component 'enrol_elediacohortgreeting', language 'de', branch 'MOODLE_24_STABLE'
  *
- * @package   enrol_elediacohortgreeting
- * @copyright 1999 onwards Martin Dougiamas  {@link http://moodle.com}
+ * @package    enrol
+ * @subpackage elediacohortgreeting
+ * @author     Benjamin Wolf <support@eledia.de>
+ * @copyright  2013 eLeDia GmbH
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

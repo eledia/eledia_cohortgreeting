@@ -23,8 +23,10 @@
  *   - you need to change the "www-data" to match the apache user account
  *   - use "su" if "sudo" not available
  *
- * @package    enrol_elediacohortgreeting
- * @copyright  2011 Petr Skoda {@link http://skodak.org}
+ * @package    enrol
+ * @subpackage elediacohortgreeting
+ * @author     Benjamin Wolf <support@eledia.de>
+ * @copyright  2013 eLeDia GmbH
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
