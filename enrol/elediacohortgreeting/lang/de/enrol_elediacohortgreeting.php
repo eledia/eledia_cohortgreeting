@@ -42,7 +42,7 @@ $string['elediacohortgreeting:view'] = 'Globale Gruppen nutzen und Mitglieder se
 ';
 $string['enrolcohort'] = 'Globale Gruppe einschreiben(mit Begrüßung)';
 $string['instanceexists'] = 'Globale Gruppen werden mit der ausgewählten Rolle abgeglichen';
-$string['pluginname'] = 'eLeDia Globale Gruppen Begrüßung';
+$string['pluginname'] = 'Globale Gruppen Begrüßung';
 $string['pluginname_desc'] = 'Das Plugin \'Globale Gruppen\' synchronisiert die Mitglieder globaler Gruppen mit der Kurseinschreibung';
 $string['status'] = 'Aktiv';
 $string['addcohort'] = 'Neue globale Gruppe';

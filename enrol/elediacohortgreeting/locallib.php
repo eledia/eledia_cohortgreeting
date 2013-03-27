@@ -539,7 +539,6 @@ function enrol_elediacohortgreeting_search_cohorts(course_enrolment_manager $man
 function eledia_coursegreeting ($userid, $instance) {
     global $DB;
 
-//mtrace('mailgreeting '.$userid.' '.$instance->customtext1);
     if(empty($instance->customint3)){
         return;
     }
