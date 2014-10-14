@@ -88,7 +88,7 @@ class enrol_elediacohortgreeting_plugin extends enrol_plugin {
         if (!has_capability('moodle/course:enrolconfig', $coursecontext) or !has_capability('enrol/elediacohortgreeting:config', $coursecontext)) {
             return false;
         }
-        list($sqlparents, $params) = $DB->get_in_or_equal(get_parent_contexts($coursecontext));
+        list($sqlparents, $params) = $DB->get_in_or_equal($coursecontext->get_parent_context_ids());
         $sql = "SELECT id, contextid
                   FROM {cohort}
                  WHERE contextid $sqlparents

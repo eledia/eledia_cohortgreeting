@@ -49,6 +49,7 @@ class enrol_elediacohortgreeting_edit_form extends moodleform {
         $mform->addElement('header','general', get_string('pluginname', 'enrol_elediacohortgreeting'));
 
         $mform->addElement('text', 'name', get_string('custominstancename', 'enrol'));
+        $mform->setType('name', PARAM_RAW);
 
         $options = array(ENROL_INSTANCE_ENABLED  => get_string('yes'),
                          ENROL_INSTANCE_DISABLED => get_string('no'));

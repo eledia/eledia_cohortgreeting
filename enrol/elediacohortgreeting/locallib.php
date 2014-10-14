@@ -543,7 +543,7 @@ function eledia_coursegreeting ($userid, $instance) {
         return;
     }
 
-    $support_user = generate_email_supportuser();
+    $support_user = core_user::get_support_user();
     $course = $DB->get_record('course', array('id' => $instance->courseid), 'fullname', MUST_EXIST);
 
     $subject = get_string('welcometocourse', '', $course->fullname);

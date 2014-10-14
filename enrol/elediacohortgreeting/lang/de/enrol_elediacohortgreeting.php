@@ -41,7 +41,7 @@ $string['cohortsin'] = '{$a}: verfügbare globale Gruppen';
 $string['elediacohortgreeting:view'] = 'Globale Gruppen nutzen und Mitglieder sehen
 ';
 $string['enrolcohort'] = 'Globale Gruppe einschreiben(mit Begrüßung)';
-$string['instanceexists'] = 'Globale Gruppen werden mit der ausgewählten Rolle abgeglichen';
+$string['instanceexists'] = 'Globale Gruppen mit der ausgewählten Rolle existiert in deisme Kurs bereits.';
 $string['pluginname'] = 'Globale Gruppen Begrüßung';
 $string['pluginname_desc'] = 'Das Plugin \'Globale Gruppen\' synchronisiert die Mitglieder globaler Gruppen mit der Kurseinschreibung';
 $string['status'] = 'Aktiv';
