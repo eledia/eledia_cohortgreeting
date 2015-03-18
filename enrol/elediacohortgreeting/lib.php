@@ -339,6 +339,17 @@ class enrol_elediacohortgreeting_plugin extends enrol_plugin {
         // Nothing to do here, the group members are added in $this->restore_group_restored()
         return;
     }
+
+    /**
+     * Is it possible to hide/show enrol instance via standard UI?
+     *
+     * @param stdClass $instance
+     * @return bool
+     */
+    public function can_hide_show_instance($instance) {
+        return true;
+    }
+
 }
 
 /**
