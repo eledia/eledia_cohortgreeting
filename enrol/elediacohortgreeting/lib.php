@@ -350,6 +350,16 @@ class enrol_elediacohortgreeting_plugin extends enrol_plugin {
         return true;
     }
 
+    /**
+     * Is it possible to delete enrol instance via standard UI?
+     *
+     * @param stdClass  $instance
+     * @return bool
+     */
+    public function can_delete_instance($instance) {
+        return true;
+    }
+
 }
 
 /**
