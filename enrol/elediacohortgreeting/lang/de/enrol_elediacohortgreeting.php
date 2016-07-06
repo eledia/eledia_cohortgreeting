@@ -30,48 +30,59 @@ defined('MOODLE_INTERNAL') || die();
 $string['addgroup'] = 'Zu Gruppe hinzufügen';
 $string['ajaxmore'] = 'Mehr...';
 $string['assignrole'] = 'Rolle zuordnen';
-$string['elediacohortgreeting:config'] = 'Globale Gruppen konfigurieren';
-$string['cohortsearch'] = 'Suchen';
-$string['elediacohortgreeting:unenrol'] = 'Gesperrte Nutzer/innen aus Kursen abmelden';
-$string['cohort'] = 'Globale Gruppe(mit Begrüßung)';
-$string['elediacohortgreeting:assign'] = 'Globale Gruppenmitglieder zuweisen';
-$string['elediacohortgreeting:manage'] = 'Globale Gruppen verwalten';
-$string['cohorts'] = 'Globale Gruppen';
-$string['cohortsin'] = '{$a}: verfügbare globale Gruppen';
-$string['elediacohortgreeting:view'] = 'Globale Gruppen nutzen und Mitglieder sehen
-';
-$string['enrolcohort'] = 'Globale Gruppe einschreiben(mit Begrüßung)';
-$string['instanceexists'] = 'Globale Gruppen mit der ausgewählten Rolle existiert in diesem Kurs bereits.';
-$string['pluginname'] = 'Globale Gruppen Begrüßung';
-$string['pluginname_desc'] = 'Das Plugin \'Globale Gruppen\' synchronisiert die Mitglieder globaler Gruppen mit der Kurseinschreibung';
-$string['status'] = 'Aktiv';
 $string['addcohort'] = 'Neue globale Gruppe';
 $string['anycohort'] = 'Alle';
 $string['assign'] = 'Zuweisen';
 $string['assignto'] = 'Mitglieder der globalen Gruppe \'{$a}\'';
+
 $string['backtocohorts'] = 'Zurück zu globalen Gruppen';
 $string['bulkadd'] = 'Zur globalen Gruppe hinzufügen';
 $string['bulknocohort'] = 'Keine verfügbaren globalen Gruppen gefunden';
 
+$string['cohortsearch'] = 'Suchen';
+$string['cohort'] = 'Globale Gruppe(mit Begrüßung)';
+$string['cohorts'] = 'Globale Gruppen';
+$string['cohortsin'] = '{$a}: verfügbare globale Gruppen';
 $string['component'] = 'Quelle';
 $string['currentusers'] = 'Aktuelle Nutzer/innen';
 $string['currentusersmatching'] = 'Aktuell passende Nutzer/innen';
+$string['creategroup'] = 'Neue Gruppe anlegen';
+
 $string['delcohort'] = 'Globale Gruppe löschen';
 $string['delconfirm'] = 'Möchten Sie die globale Gruppe \'{$a}\' wirklich löschen?';
 $string['description'] = 'Beschreibung';
 $string['duplicateidnumber'] = 'Eine globale Gruppe mit der gleichen ID existiert bereits';
+
+$string['elediacohortgreeting:config'] = 'Globale Gruppen konfigurieren';
+$string['elediacohortgreeting:unenrol'] = 'Gesperrte Nutzer/innen aus Kursen abmelden';
+$string['elediacohortgreeting:assign'] = 'Globale Gruppenmitglieder zuweisen';
+$string['elediacohortgreeting:manage'] = 'Globale Gruppen verwalten';
+$string['elediacohortgreeting:view'] = 'Globale Gruppen nutzen und Mitglieder sehen
+';
+$string['enrolcohort'] = 'Globale Gruppe einschreiben(mit Begrüßung)';
 $string['editcohort'] = 'Globale Gruppe bearbeiten';
 $string['external'] = 'Externe globale Gruppe';
+
+$string['instanceexists'] = 'Globale Gruppen mit der ausgewählten Rolle existiert in diesem Kurs bereits.';
 $string['idnumber'] = 'Globale Gruppen-ID';
+
 $string['memberscount'] = 'Größe der globalen Gruppe';
+
 $string['name'] = 'Name';
 $string['nocomponent'] = 'Manuell erzeugt';
+
 $string['potusers'] = 'Mögliche Nutzer/innen';
 $string['potusersmatching'] = 'Mögliche passende Nutzer/innen
 ';
+$string['pluginname'] = 'Globale Gruppen Begrüßung';
+$string['pluginname_desc'] = 'Das Plugin \'Globale Gruppen\' synchronisiert die Mitglieder globaler Gruppen mit der Kurseinschreibung';
+
 $string['removeuserwarning'] = 'Wenn Nutzer/innen aus einer globalen Gruppe entfernt werden, könnten diese Nutzer/innen aus diversen Kursen abgemeldet werden, wobei alle Nutzereinstellungen, Bewertungen, Gruppenzugehörigkeiten und weitere Nutzerinformationen in den betroffenen Kursen gelöscht werden.';
+
 $string['search'] = 'Suchen';
 $string['searchcohort'] = 'Globale Gruppen suchen';
 $string['selectfromcohort'] = 'Mitglieder aus globaler Gruppe wählen';
+$string['status'] = 'Aktiv';
+
 $string['unknowncohort'] = 'Unbekannte globale Gruppe \'{$a}\'!';
 $string['useradded'] = 'Nutzer/in zur globalen Gruppe \'{$a}\' hinzugefügt';
