@@ -26,8 +26,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2014101400;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->release = '0.2 (2014101400)';
+$plugin->version   = 2016060700;        // The current plugin version (Date: YYYYMMDDXX).
+$plugin->release = '0.2 (2016060700)';
 $plugin->requires  = 2014050800;        // Requires this Moodle version.
 $plugin->maturity = MATURITY_STABLE;
 $plugin->component = 'enrol_elediacohortgreeting';    // Full name of the plugin (used for diagnostics).
