@@ -53,15 +53,14 @@ $string['delconfirm'] = 'Möchten Sie die globale Gruppe \'{$a}\' wirklich lösc
 $string['description'] = 'Beschreibung';
 $string['duplicateidnumber'] = 'Eine globale Gruppe mit der gleichen ID existiert bereits';
 
+$string['editcohort'] = 'Globale Gruppe bearbeiten';
 $string['elediacohortgreeting:config'] = 'Globale Gruppen konfigurieren';
 $string['elediacohortgreeting:unenrol'] = 'Gesperrte Nutzer/innen aus Kursen abmelden';
 $string['elediacohortgreeting:assign'] = 'Globale Gruppenmitglieder zuweisen';
 $string['elediacohortgreeting:manage'] = 'Globale Gruppen verwalten';
-$string['elediacohortgreeting:view'] = 'Globale Gruppen nutzen und Mitglieder sehen
-';
-$string['enrolcohort'] = 'Globale Gruppe einschreiben(mit Begrüßung)';
-$string['editcohort'] = 'Globale Gruppe bearbeiten';
+$string['elediacohortgreeting:view'] = 'Globale Gruppen nutzen und Mitglieder sehen';
 $string['external'] = 'Externe globale Gruppe';
+$string['enrolcohort'] = 'Globale Gruppe einschreiben(mit Begrüßung)';
 
 $string['instanceexists'] = 'Globale Gruppen mit der ausgewählten Rolle existiert in diesem Kurs bereits.';
 $string['idnumber'] = 'Globale Gruppen-ID';
