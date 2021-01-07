@@ -34,14 +34,14 @@ class enrol_elediacohortgreeting_testcase extends advanced_testcase {
 
     protected function enable_plugin() {
         $enabled = enrol_get_plugins(true);
-        $enabled['cohort'] = true;
+        $enabled['elediacohortgreeting'] = true;
         $enabled = array_keys($enabled);
         set_config('enrol_plugins_enabled', implode(',', $enabled));
     }
 
     protected function disable_plugin() {
         $enabled = enrol_get_plugins(true);
-        unset($enabled['cohort']);
+        unset($enabled['elediacohortgreeting']);
         $enabled = array_keys($enabled);
         set_config('enrol_plugins_enabled', implode(',', $enabled));
     }
@@ -99,6 +99,8 @@ class enrol_elediacohortgreeting_testcase extends advanced_testcase {
         $id = $cohortplugin->add_instance($course2, array('customint1'=>$cohort2->id, 'roleid'=>$studentrole->id));
         $cohortinstance3 = $DB->get_record('enrol', array('id'=>$id));
 
+        $id = $cohortplugin->add_instance($course2, array('customint1' => $cohort2->id, 'roleid' => $studentrole->id, 'status' => ENROL_INSTANCE_DISABLED));
+        $cohortinstance4 = $DB->get_record('enrol', array('id' => $id));
 
         // Test cohort member add event.
 
@@ -118,6 +120,7 @@ class enrol_elediacohortgreeting_testcase extends advanced_testcase {
         $this->assertEquals(7, $DB->count_records('user_enrolments', array()));
         $this->assertTrue($DB->record_exists('user_enrolments', array('enrolid'=>$cohortinstance2->id, 'userid'=>$user3->id)));
         $this->assertTrue($DB->record_exists('user_enrolments', array('enrolid'=>$cohortinstance3->id, 'userid'=>$user3->id)));
+        $this->assertFalse($DB->record_exists('user_enrolments', array('enrolid' => $cohortinstance4->id, 'userid' => $user3->id)));
         $this->assertEquals(7, $DB->count_records('role_assignments', array()));
         $this->assertTrue($DB->record_exists('role_assignments', array('contextid'=>context_course::instance($course1->id)->id, 'userid'=>$user3->id, 'roleid'=>$teacherrole->id, 'component'=>'enrol_elediacohortgreeting', 'itemid'=>$cohortinstance2->id)));
         $this->assertTrue($DB->record_exists('role_assignments', array('contextid'=>context_course::instance($course2->id)->id, 'userid'=>$user3->id, 'roleid'=>$studentrole->id, 'component'=>'enrol_elediacohortgreeting', 'itemid'=>$cohortinstance3->id)));
@@ -313,6 +316,9 @@ class enrol_elediacohortgreeting_testcase extends advanced_testcase {
         $id = $cohortplugin->add_instance($course2, array('customint1'=>$cohort2->id, 'roleid'=>$studentrole->id));
         $cohortinstance3 = $DB->get_record('enrol', array('id'=>$id));
 
+        $id = $cohortplugin->add_instance($course2, array('customint1' => $cohort2->id, 'roleid' => $studentrole->id, 'status' => ENROL_INSTANCE_DISABLED));
+        $cohortinstance4 = $DB->get_record('enrol', array('id' => $id));
+
         cohort_add_member($cohort1->id, $user1->id);
         cohort_add_member($cohort1->id, $user2->id);
         cohort_add_member($cohort1->id, $user4->id);
@@ -343,6 +349,7 @@ class enrol_elediacohortgreeting_testcase extends advanced_testcase {
         $this->assertTrue($DB->record_exists('user_enrolments', array('enrolid'=>$cohortinstance1->id, 'userid'=>$user2->id)));
         $this->assertTrue($DB->record_exists('user_enrolments', array('enrolid'=>$cohortinstance1->id, 'userid'=>$user4->id)));
         $this->assertTrue($DB->record_exists('user_enrolments', array('enrolid'=>$cohortinstance2->id, 'userid'=>$user3->id)));
+        $this->assertFalse($DB->record_exists('user_enrolments', array('enrolid' => $cohortinstance4->id, 'userid' => $user3->id)));
         $this->assertEquals(7, $DB->count_records('role_assignments', array()));
         $this->assertTrue($DB->record_exists('role_assignments', array('contextid'=>context_course::instance($course1->id)->id, 'userid'=>$user1->id, 'roleid'=>$studentrole->id, 'component'=>'enrol_elediacohortgreeting', 'itemid'=>$cohortinstance1->id)));
         $this->assertTrue($DB->record_exists('role_assignments', array('contextid'=>context_course::instance($course1->id)->id, 'userid'=>$user2->id, 'roleid'=>$studentrole->id, 'component'=>'enrol_elediacohortgreeting', 'itemid'=>$cohortinstance1->id)));
@@ -452,7 +459,7 @@ class enrol_elediacohortgreeting_testcase extends advanced_testcase {
 
         // Setup a few courses and categories.
 
-        $cohortplugin = enrol_get_plugin('cohort');
+        $cohortplugin = enrol_get_plugin('elediacohortgreeting');
         $manualplugin = enrol_get_plugin('manual');
 
         $studentrole = $DB->get_record('role', array('shortname'=>'student'));
