@@ -68,7 +68,7 @@ class enrol_elediacohortgreeting_plugin extends enrol_plugin {
             }
             $cohortname = format_string($cohort->name, true, array('context'=>context::instance_by_id($cohort->contextid)));
             if ($role = $DB->get_record('role', array('id'=>$instance->roleid))) {
-                $role = role_get_name($role, context_course::instance($instance->courseid, IGNORE_MISSING));
+                $role = role_get_name($role, context_course::instance($instance->courseid, IGNORE_MISSING), ROLENAME_BOTH);
                 return get_string('pluginname', 'enrol_'.$enrol) . ' (' . $cohortname . ' - ' . $role .')';
             } else {
                 return get_string('pluginname', 'enrol_'.$enrol) . ' (' . $cohortname . ')';
@@ -159,19 +159,6 @@ class enrol_elediacohortgreeting_plugin extends enrol_plugin {
         $trace->finished();
 
         return $result;
-    }
-
-    /**
-     * Called for all enabled enrol plugins that returned true from is_cron_required().
-     * @return void
-     */
-    public function cron() {
-        global $CFG;
-
-        require_once("$CFG->dirroot/enrol/elediacohortgreeting/locallib.php");
-        $trace = new null_progress_trace();
-        enrol_elediacohortgreeting_sync($trace);
-        $trace->finished();
     }
 
     /**

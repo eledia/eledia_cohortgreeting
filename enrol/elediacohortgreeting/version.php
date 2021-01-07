@@ -24,9 +24,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2019010300;        // The current plugin version (Date: YYYYMMDDXX)
-$plugin->requires  = 2016051900;        // Requires this Moodle version
-$plugin->maturity = MATURITY_STABLE;
-$plugin->release = '1.0 (2019010300)';
+$plugin->version   = 2020110900;        // The current plugin version (Date: YYYYMMDDXX)
+$plugin->requires  = 2020110300;        // Requires this Moodle version
 $plugin->component = 'enrol_elediacohortgreeting';    // Full name of the plugin (used for diagnostics)
-$plugin->cron      = 60*60;             // run cron every hour by default, it is not out-of-sync often
