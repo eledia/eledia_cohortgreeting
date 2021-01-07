@@ -90,7 +90,11 @@ class enrol_elediacohortgreeting_testcase extends advanced_testcase {
         $this->assertEquals(2, $DB->count_records('role_assignments', array()));
         $this->assertEquals(2, $DB->count_records('user_enrolments', array()));
 
-        $id = $cohortplugin->add_instance($course1, array('customint1'=>$cohort1->id, 'roleid'=>$studentrole->id));
+        // Prepare test sending email with sink object.
+        unset_config('noemailever');
+        $sink = $this->redirectEmails();
+
+        $id = $cohortplugin->add_instance($course1, array('customint1'=>$cohort1->id, 'roleid'=>$studentrole->id, 'customint3'=>1, 'customtext1'=>'Test email'));
         $cohortinstance1 = $DB->get_record('enrol', array('id'=>$id));
 
         $id = $cohortplugin->add_instance($course1, array('customint1'=>$cohort2->id, 'roleid'=>$teacherrole->id));
@@ -107,6 +111,11 @@ class enrol_elediacohortgreeting_testcase extends advanced_testcase {
         cohort_add_member($cohort1->id, $user1->id);
         cohort_add_member($cohort1->id, $user2->id);
         cohort_add_member($cohort1->id, $user4->id);
+
+        // Count the sended email.
+        $messages = $sink->get_messages();
+        $this->assertEquals(3, count($messages));
+
         $this->assertEquals(5, $DB->count_records('user_enrolments', array()));
         $this->assertTrue($DB->record_exists('user_enrolments', array('enrolid'=>$cohortinstance1->id, 'userid'=>$user1->id)));
         $this->assertTrue($DB->record_exists('user_enrolments', array('enrolid'=>$cohortinstance1->id, 'userid'=>$user2->id)));
