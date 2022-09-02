@@ -42,7 +42,9 @@ class enrol_cohort_lib_testcase extends advanced_testcase {
      * Test that a new group with the name of the cohort is created.
      */
     public function test_enrol_elediacohortgreeting_create_new_group() {
-        global $DB;
+        global $DB, $CFG;
+        require_once($CFG->dirroot.'/enrol/elediacohortgreeting/lib.php');
+        
         $this->resetAfterTest();
         // Create a category.
         $category = $this->getDataGenerator()->create_category();
